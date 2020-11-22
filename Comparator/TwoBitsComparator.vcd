@@ -1,0 +1,181 @@
+$date
+	Sun Nov 22 18:51:45 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Comparator_tb $end
+$scope module compare $end
+$var wire 1 ! A0 $end
+$var wire 1 " A1 $end
+$var wire 1 # B0 $end
+$var wire 1 $ B1 $end
+$var wire 1 % ET $end
+$var wire 1 & GT $end
+$var wire 1 ' LT $end
+$var wire 1 ( w1 $end
+$var wire 1 ) w2 $end
+$var wire 1 * LT1 $end
+$var wire 1 + LT0 $end
+$var wire 1 , GT1 $end
+$var wire 1 - GT0 $end
+$var wire 1 . ET1 $end
+$var wire 1 / ET0 $end
+$scope module C0 $end
+$var wire 1 ! A $end
+$var wire 1 # B $end
+$var wire 1 / ET $end
+$var wire 1 + LT $end
+$var wire 1 - GT $end
+$upscope $end
+$scope module C1 $end
+$var wire 1 " A $end
+$var wire 1 $ B $end
+$var wire 1 . ET $end
+$var wire 1 * LT $end
+$var wire 1 , GT $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1/
+1.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+1%
+0$
+0#
+0"
+0!
+$end
+#100
+0%
+1'
+0/
+1)
+1+
+1#
+#200
+0.
+1/
+0)
+1*
+1$
+0+
+0#
+#300
+0/
+1+
+1#
+#400
+1&
+1(
+1.
+0'
+1-
+1!
+0*
+0$
+0+
+0#
+#500
+1%
+0&
+1/
+0(
+0-
+1#
+#600
+0%
+0&
+0.
+1'
+0/
+0(
+1*
+1$
+1-
+0#
+#700
+1/
+0-
+1#
+#800
+1&
+0'
+1,
+1"
+0!
+0*
+0$
+0-
+0#
+#900
+0/
+1+
+1#
+#1000
+1%
+1.
+0&
+1/
+0,
+1$
+0+
+0#
+#1100
+0%
+1'
+0/
+1)
+1+
+1#
+#1200
+0'
+0.
+1&
+0)
+1-
+1!
+1,
+0$
+0+
+0#
+#1300
+1/
+0-
+1#
+#1400
+1(
+1.
+1&
+0/
+0,
+1$
+1-
+0#
+#1500
+1%
+0&
+1/
+0(
+0-
+1#
+#1600
+0"
+0!
+0,
+0$
+0-
+0#

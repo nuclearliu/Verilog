@@ -1,0 +1,29 @@
+`timescale 1ns/100ps
+`include "Encoder8to3_bh.v"
+
+module Encoder8to3_bh_tb;
+   wire GS, EO;
+   reg [7:0] I;
+   reg EI;
+   wire [2:0] Y;
+   Encoder8to3_bh En(EI, I, Y, GS, EO);
+   integer k;
+   initial begin
+      $dumpfile("Encoder8to3_bh.vcd");
+      $dumpvars(0, Encoder8to3_bh_tb);
+      I = 8'b00000000;
+      EI = 0;
+      #1 EI = 1;
+      #2 I += 1;
+      for (k = 0; k < 8; k = k + 1)
+         if (k == 4) begin #1 EI = 0; #1 I = I << 1; EI = 1; end
+         else #2 I = I << 1;
+
+      //for (k=0; k<8; k=k+1)
+      //  #10 $display("done testing case %d", k);
+
+      $finish;
+
+   end
+
+endmodule

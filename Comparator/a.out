@@ -1,0 +1,127 @@
+#! /usr/local/Cellar/icarus-verilog/10.3/bin/vvp
+:ivl_version "10.3 (stable)" "(v10_3)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7ffa3f407990 .scope module, "Comparator_tb" "Comparator_tb" 2 4;
+ .timescale -9 -10;
+v0x7ffa3f424190_0 .var "A0", 0 0;
+v0x7ffa3f424230_0 .var "A1", 0 0;
+v0x7ffa3f424310_0 .var "B0", 0 0;
+v0x7ffa3f4243e0_0 .var "B1", 0 0;
+v0x7ffa3f4244b0_0 .net "ET", 0 0, L_0x7ffa3f424eb0;  1 drivers
+v0x7ffa3f424580_0 .net "GT", 0 0, L_0x7ffa3f424f20;  1 drivers
+v0x7ffa3f424610_0 .net "LT", 0 0, L_0x7ffa3f425010;  1 drivers
+v0x7ffa3f4246a0_0 .var/i "k", 31 0;
+S_0x7ffa3f40a280 .scope module, "compare" "TwoBitsComparator" 2 7, 3 7 0, S_0x7ffa3f407990;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A1"
+    .port_info 1 /INPUT 1 "A0"
+    .port_info 2 /INPUT 1 "B1"
+    .port_info 3 /INPUT 1 "B0"
+    .port_info 4 /OUTPUT 1 "GT"
+    .port_info 5 /OUTPUT 1 "ET"
+    .port_info 6 /OUTPUT 1 "LT"
+L_0x7ffa3f424d50 .functor AND 1, L_0x7ffa3f424b00, L_0x7ffa3f424730, C4<1>, C4<1>;
+L_0x7ffa3f424dc0 .functor AND 1, L_0x7ffa3f424b00, L_0x7ffa3f4249c0, C4<1>, C4<1>;
+L_0x7ffa3f424eb0 .functor AND 1, L_0x7ffa3f424b00, L_0x7ffa3f424810, C4<1>, C4<1>;
+L_0x7ffa3f424f20 .functor OR 1, L_0x7ffa3f424a60, L_0x7ffa3f424d50, C4<0>, C4<0>;
+L_0x7ffa3f425010 .functor OR 1, L_0x7ffa3f424cb0, L_0x7ffa3f424dc0, C4<0>, C4<0>;
+v0x7ffa3f423750_0 .net "A0", 0 0, v0x7ffa3f424190_0;  1 drivers
+v0x7ffa3f423800_0 .net "A1", 0 0, v0x7ffa3f424230_0;  1 drivers
+v0x7ffa3f423890_0 .net "B0", 0 0, v0x7ffa3f424310_0;  1 drivers
+v0x7ffa3f423940_0 .net "B1", 0 0, v0x7ffa3f4243e0_0;  1 drivers
+v0x7ffa3f4239f0_0 .net "ET", 0 0, L_0x7ffa3f424eb0;  alias, 1 drivers
+v0x7ffa3f423ac0_0 .net "ET0", 0 0, L_0x7ffa3f424810;  1 drivers
+v0x7ffa3f423b50_0 .net "ET1", 0 0, L_0x7ffa3f424b00;  1 drivers
+v0x7ffa3f423c00_0 .net "GT", 0 0, L_0x7ffa3f424f20;  alias, 1 drivers
+v0x7ffa3f423c90_0 .net "GT0", 0 0, L_0x7ffa3f424730;  1 drivers
+v0x7ffa3f423dc0_0 .net "GT1", 0 0, L_0x7ffa3f424a60;  1 drivers
+v0x7ffa3f423e50_0 .net "LT", 0 0, L_0x7ffa3f425010;  alias, 1 drivers
+v0x7ffa3f423ee0_0 .net "LT0", 0 0, L_0x7ffa3f4249c0;  1 drivers
+v0x7ffa3f423f70_0 .net "LT1", 0 0, L_0x7ffa3f424cb0;  1 drivers
+v0x7ffa3f424020_0 .net "w1", 0 0, L_0x7ffa3f424d50;  1 drivers
+v0x7ffa3f4240b0_0 .net "w2", 0 0, L_0x7ffa3f424dc0;  1 drivers
+S_0x7ffa3f4066c0 .scope module, "C0" "Comparator" 3 9, 3 1 0, S_0x7ffa3f40a280;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "GT"
+    .port_info 3 /OUTPUT 1 "ET"
+    .port_info 4 /OUTPUT 1 "LT"
+L_0x7ffa3f424810 .functor XNOR 1, v0x7ffa3f424190_0, v0x7ffa3f424310_0, C4<0>, C4<0>;
+v0x7ffa3f411fc0_0 .net "A", 0 0, v0x7ffa3f424190_0;  alias, 1 drivers
+v0x7ffa3f422e10_0 .net "B", 0 0, v0x7ffa3f424310_0;  alias, 1 drivers
+v0x7ffa3f422eb0_0 .net "ET", 0 0, L_0x7ffa3f424810;  alias, 1 drivers
+v0x7ffa3f422f40_0 .net "GT", 0 0, L_0x7ffa3f424730;  alias, 1 drivers
+v0x7ffa3f422fe0_0 .net "LT", 0 0, L_0x7ffa3f4249c0;  alias, 1 drivers
+L_0x7ffa3f424730 .cmp/gt 1, v0x7ffa3f424190_0, v0x7ffa3f424310_0;
+L_0x7ffa3f4249c0 .cmp/gt 1, v0x7ffa3f424310_0, v0x7ffa3f424190_0;
+S_0x7ffa3f423140 .scope module, "C1" "Comparator" 3 10, 3 1 0, S_0x7ffa3f40a280;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "GT"
+    .port_info 3 /OUTPUT 1 "ET"
+    .port_info 4 /OUTPUT 1 "LT"
+L_0x7ffa3f424b00 .functor XNOR 1, v0x7ffa3f424230_0, v0x7ffa3f4243e0_0, C4<0>, C4<0>;
+v0x7ffa3f423370_0 .net "A", 0 0, v0x7ffa3f424230_0;  alias, 1 drivers
+v0x7ffa3f423400_0 .net "B", 0 0, v0x7ffa3f4243e0_0;  alias, 1 drivers
+v0x7ffa3f4234a0_0 .net "ET", 0 0, L_0x7ffa3f424b00;  alias, 1 drivers
+v0x7ffa3f423550_0 .net "GT", 0 0, L_0x7ffa3f424a60;  alias, 1 drivers
+v0x7ffa3f4235f0_0 .net "LT", 0 0, L_0x7ffa3f424cb0;  alias, 1 drivers
+L_0x7ffa3f424a60 .cmp/gt 1, v0x7ffa3f424230_0, v0x7ffa3f4243e0_0;
+L_0x7ffa3f424cb0 .cmp/gt 1, v0x7ffa3f4243e0_0, v0x7ffa3f424230_0;
+    .scope S_0x7ffa3f407990;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x7ffa3f4246a0_0, 0, 32;
+    %end;
+    .thread T_0;
+    .scope S_0x7ffa3f407990;
+T_1 ;
+    %vpi_call 2 10 "$dumpfile", "TwoBitsComparator.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7ffa3f40a280 {0 0 0};
+    %load/vec4 v0x7ffa3f4246a0_0;
+    %pad/s 4;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f424310_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f4243e0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f424190_0, 0, 1;
+    %store/vec4 v0x7ffa3f424230_0, 0, 1;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0x7ffa3f4246a0_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0x7ffa3f4246a0_0;
+    %cmpi/s 16, 0, 32;
+    %flag_or 5, 4;
+    %jmp/0xz T_1.1, 5;
+    %delay 100, 0;
+    %load/vec4 v0x7ffa3f4246a0_0;
+    %pad/s 4;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f424310_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f4243e0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x7ffa3f424190_0, 0, 1;
+    %store/vec4 v0x7ffa3f424230_0, 0, 1;
+    %load/vec4 v0x7ffa3f4246a0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x7ffa3f4246a0_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TwoBitsComparator_tb.vt";
+    "./TwoBitsComparator.v";

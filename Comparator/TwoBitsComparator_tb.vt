@@ -1,0 +1,19 @@
+`timescale 1ns/100ps
+`include "TwoBitsComparator.v"
+
+module Comparator_tb;
+   reg A1, A0, B1, B0;
+   wire GT, ET, LT;
+   TwoBitsComparator compare(A1, A0, B1, B0, GT, ET, LT);
+   integer k = 0;
+   initial begin
+      $dumpfile("TwoBitsComparator.vcd");
+      $dumpvars(0, compare);
+      {A1, A0, B1, B0} = k;
+      for (k = 1; k <= 16; k = k + 1)
+      begin
+         #10 {A1, A0, B1, B0} = k;
+      end
+      $finish;
+   end
+endmodule

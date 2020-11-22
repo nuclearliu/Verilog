@@ -1,0 +1,25 @@
+`timescale 1ns/100ps
+`include "Up_Down.v"
+
+module Up_Down_tb;
+   reg CP, Up_Down, CR;
+   wire Q0, Q1, Q2;
+   //assign Q0 = 0; assign Q1 = 0; assign Q2 = 0;
+   Up_DownCounter counter({Q2, Q1, Q0}, CP, Up_Down, CR);
+   
+   initial begin
+      $dumpfile("Up_Down.vcd");
+      $dumpvars(0, counter);
+      Up_Down = 0;
+      CP = 0;
+      CR = 1;
+      #0.5 CR = 0;
+      #0.5 CR = 1;
+      #40 Up_Down = 1;
+      #40
+      $finish;
+   end
+   always begin
+      #2 CP = ~CP;
+   end
+endmodule

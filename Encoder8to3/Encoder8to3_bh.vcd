@@ -1,0 +1,103 @@
+$date
+	Sun Nov 22 16:53:51 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Encoder8to3_bh_tb $end
+$var wire 3 ! Y [2:0] $end
+$var wire 1 " GS $end
+$var wire 1 # EO $end
+$var reg 1 $ EI $end
+$var reg 8 % I [7:0] $end
+$var integer 32 & k [31:0] $end
+$scope module En $end
+$var wire 1 $ EI $end
+$var wire 8 ' I [7:0] $end
+$var reg 1 # EO $end
+$var reg 1 " GS $end
+$var reg 3 ( Y [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b0 '
+bx &
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#10
+1#
+0"
+1$
+#30
+0#
+1"
+b0 &
+b1 %
+b1 '
+#50
+b1 !
+b1 (
+b1 &
+b10 %
+b10 '
+#70
+b10 !
+b10 (
+b10 &
+b100 %
+b100 '
+#90
+b11 !
+b11 (
+b11 &
+b1000 %
+b1000 '
+#110
+b100 !
+b100 (
+b100 &
+b10000 %
+b10000 '
+#120
+0"
+b0 !
+b0 (
+0$
+#130
+b101 !
+b101 (
+1"
+b101 &
+1$
+b100000 %
+b100000 '
+#150
+b110 !
+b110 (
+b110 &
+b1000000 %
+b1000000 '
+#170
+b111 !
+b111 (
+b111 &
+b10000000 %
+b10000000 '
+#190
+1#
+0"
+b0 !
+b0 (
+b1000 &
+b0 %
+b0 '
