@@ -1,0 +1,21 @@
+`timescale 1ns/100ps
+`include "ripplecounter.v"
+
+module ripplecounter_tb;
+   reg CP, Rd;
+   wire Q0,Q1,Q2,Q3;
+   ripplecounter counter1(Q0,Q1,Q2,Q3,CP, Rd);
+   initial begin
+      $dumpfile("ripplecounter.vcd");
+      $dumpvars(0, ripplecounter_tb);
+      Rd = 1;
+      CP = 0;
+      #1 Rd = 0;
+      #0.5 Rd = 1;
+      #28
+      $finish;
+   end
+   always begin
+      #2 CP = ~CP;
+   end
+endmodule

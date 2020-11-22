@@ -1,0 +1,24 @@
+`timescale 1ns/100ps
+`include "Step_motor.v"
+
+module Up_Down_tb;
+   reg M, CP, nCR;
+   wire A, B, C;
+   Step_motor motor(M, CP, nCR, A, B, C);
+   
+   initial begin
+      $dumpfile("Step_motor.vcd");
+      $dumpvars(0, motor);
+      M = 0;
+      CP = 0;
+      nCR = 1;
+      #0.5 nCR = 0;
+      #0.5 nCR = 1;
+      #30 M = 1;
+      #30
+      $finish;
+   end
+   always begin
+      #2 CP = ~CP;
+   end
+endmodule
